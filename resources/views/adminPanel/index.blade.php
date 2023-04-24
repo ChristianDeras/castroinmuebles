@@ -2,5 +2,5 @@
 
 @section('contenedor')
 
-
+    
 @endsection
