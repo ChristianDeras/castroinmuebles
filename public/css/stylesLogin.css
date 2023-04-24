@@ -1,0 +1,33 @@
+.cont{
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.login-left{
+    border: 1px solid black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.login-r{
+    background-color: #0e90b1;
+}
+
+.text-lg{
+    text-decoration: underline;
+}
+
+li{
+    transition: all 0.2s ease;
+}
+
+li:hover {background-color: #ffbf00;
+    border-radius: 10px;
+}
+
+.altura{
+    height: 100%;
+}
+
+
