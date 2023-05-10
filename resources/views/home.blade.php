@@ -15,9 +15,9 @@
     <div class="mask w-100" style="background-color: rgba(31, 41, 40, 0.6)">
         <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white d-flex justify-content-center flex-column align-items-center">
-                <div class="img-circle d-flex justify-content-center align-items-center"><img src="/Img/Logo CC-02.png"
-                        alt="" class="img-fluid" width="400"></div>
-                <h4 class="mb-3 font-rowdies">
+                <div class=" d-flex justify-content-center align-items-center"><img src="/Img/logo.png"
+                        alt="" class="img-fluid" width="600"></div>
+                <h4 class="mb-3 font-rowdies mt-2">
                     Buscamos brindarle una atencion asesorada en cada momento del
                     tramite
                 </h4>
@@ -32,6 +32,7 @@
     <span class="text-light position">¿Eres salvadoreño en el exterior?</span>
 </button>
 
+
 <!-- Modal Extranjero -->
 <div class="modal fade mt-5" id="Extranjero" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-scrollable modal-xl">
@@ -43,8 +44,15 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-12">
-                        <section class='infos'>
-                            <div class='cards'>
+                        
+                    </div>
+                    <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="container  d-flex justify-content-center align-items-center">
+                        <div class='cards'>
                                 <div class='icon'>
                                     <i class="fas fa-laptop"></i>
                                 </div>
@@ -52,7 +60,11 @@
                                     <h2>¿Necesitas algún documento de oficinas de gobierno/alcaldias?</h2>
                                 </div>
                             </div>
-                            <div class='cards'>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container  d-flex justify-content-center align-items-center">
+                        <div class='cards'>
                                 <div class='icon'>
                                     <i class="fas fa-laptop"></i>
                                 </div>
@@ -60,7 +72,12 @@
                                     <h2>¿Necesitas información o documentos de oficinas privadas?</h2>
                                 </div>
                             </div>
-                            <div class='cards'>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container  d-flex justify-content-center align-items-center">
+                        <div class='cards'>
                                 <div class='icon'>
                                     <i class="fas fa-laptop"></i>
                                 </div>
@@ -68,8 +85,18 @@
                                     <h2>¿Necesitas agún mandado u otro tipo de gestion/servicio?</h2>
                                 </div>
                             </div>
-                        </section>
+
+                        </div>
                     </div>
+
+                </div>
+
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -555,4 +582,33 @@ Swal.fire({
 
     stackedCard.init();
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#Extranjero').modal('toggle');
+        })
+    </script>
+    <script>
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
+</script>
     @endsection
