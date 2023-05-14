@@ -4,6 +4,28 @@
     --bg-progress:#ffc75e;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+.text-disp
+ {
+    font-family: 'Rowdies', cursive;
+    font-size: 60px;
+}
+
+.text-content{
+    font-size: 24px;
+}
+
+.bgNative{
+    background-color: var(--bgnative);
+}
+
+.brd-left{
+    border-bottom-left-radius: 35%;
+}
+
 .font-primary{
     color: var(--colortexto);
     
@@ -292,9 +314,13 @@ button > a:visited{
     align-items: center;
 }
 
+.heiger{
+    height: 70vh;
+}
+
 .cards {
 	width: 800px;
-    height: 900px;
+    height: 100vh;
 	background-color: #fff;
 	padding: 15px;
 	border-radius: 5px;

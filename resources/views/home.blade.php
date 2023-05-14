@@ -35,67 +35,29 @@
 
 <!-- Modal Extranjero -->
 <div class="modal fade mt-5" id="Extranjero" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Formulario de contacto</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-12">
-                        
-                    </div>
-                    <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="container  d-flex justify-content-center align-items-center">
-                        <div class='cards'>
-                                <div class=''>
-                                    <img  class="img-fluid" src="/Img/publi1.jpg" alt="" >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="container  d-flex justify-content-center align-items-center">
-                            <div class='cards'>
-                                <div class='icon'>
-                                    <i class="fas fa-laptop"></i>
-                                </div>
-                                <div class='texts'>
-                                    <h2>¿Necesitas información o documentos de oficinas privadas?</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="container  d-flex justify-content-center align-items-center">
-                        <div class='cards'>
-                                <div class='icon'>
-                                    <i class="fas fa-laptop"></i>
-                                </div>
-                                <div class='texts'>
-                                    <h2>¿Necesitas agún mandado u otro tipo de gestion/servicio?</h2>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content bg-gray">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 ">
+                    <img src="/Img/publi1.jpg" class="img-fluid" alt="" height="500" width="500">
                 </div>
-
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-            </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="container-fluid brd-left text-center bgNative font-primary">
+                        <span class="text-disp">¡ Hacemos tus tramites por tí !</span>
+                        <br>
+                    </div>
+                    <div class="cuerpo">
+                        <span class="text-content">Si estas en el extranjero y necesitas hacer transferencias, depositos, cuido de tus familiares de tercera edad, tenemos el personal calificado.</span>
+                    </div>
+                    <div class="extras mt-5">
+                        <span class="">Si estás en estados unidos y te preocupan tus familiares acá en el pais, te brindamos
+                            atención calificada para cualquier tramite interno que necesites en El Salvador (Cuido de familiares, pago de recibos)
+                            Fiestas sorpresas de cumpleaños.
+                        </span>
+                    </div>
                 </div>
             </div>
-            <br>
+
             
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -107,8 +69,7 @@
 <div class="modal fade" id="formulario" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
         <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Formulario de contacto</h1>
+            <div class="modal-header mt-5">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -181,8 +142,8 @@
                                 <div class="col-12">
 
                                     <label for="residendica" class="form-label">Describa su solicitud:</label>
-                                    <textarea id="descripcion" name="descripcion" cols="90" rows="10">
-                    </textarea>
+                                    <textarea id="descripcion" name="descripcion" cols="70" rows="2">
+                                    </textarea>
                                     <div class="valid-feedback">
                                         Todo bien
                                     </div>
@@ -586,28 +547,5 @@ Swal.fire({
             $('#Extranjero').modal('toggle');
         })
     </script>
-    <script>
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets'
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-});
-</script>
+    
     @endsection

@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/animate.css@3.7.2"> <!-- legacy -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/animate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.3.js"
