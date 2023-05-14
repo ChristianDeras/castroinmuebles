@@ -65,6 +65,13 @@
         
     </div>
   </div>
+  <div class="row">
+    <div class="container">
+        <div class="col-12 text-center">
+            <a href="/#servicios" class="btn btn-success">Regresar</a>
+        </div>
+    </div>
+  </div>
   <script>
     (() => {
   'use strict'
