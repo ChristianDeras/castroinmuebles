@@ -168,90 +168,14 @@
     </div>
 </div>
 <div class="modal fade mt-5" id="modalCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Datos de comprador</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Acerca de nosotros!</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="container">
-                    <form action="/compradores" method="POST" class="needs-validation" novalidate>
-                        @csrf
-                        <div class="row">
-
-                            <div class="col-12">
-                                <label for="Nombre" class="form-label">Nombre completo:</label>
-                                <input type="text" id="nombre" name="nombrecompleto" class="form-control" required>
-                                <div class="valid-feedback">
-                                    Todo bien
-                                </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese su nombre completo
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <label for="edad" class="form-label">Edad:</label>
-                                <input type="number" id="edad" name="edad" class="form-control" required>
-                                <div class="valid-feedback">
-                                    Todo bien
-                                </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese una edad válida
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <label for="tel" class="form-label">Teléfono:</label>
-                                <input type="text" id="tel" name="telefono" class="form-control" required>
-                                <div class="valid-feedback">
-                                    Todo bien
-                                </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese un celular
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="correo" class="form-label">Correo:</label>
-                                <input type="mail" id="correo" name="correo" class="form-control" required>
-                                <div class="valid-feedback">
-                                    Todo bien
-                                </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese su correo completo
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="residendica" class="form-label">Residencia:</label>
-                                <input type="mail" id="residendica" name="residencia" class="form-control" required>
-                                <div class="valid-feedback">
-                                    Todo bien
-                                </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese su direccion
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="nacionalidad" class="form-label">Nacionalidad:</label>
-                                <select name="nacionalidad" id="nacionalidad" class="form-control" required>
-                                    <option value="">Seleccionar...</option>
-                                    <option value="Nacional" id="resp">Salvadoreña</option>
-                                    <option value="Extranjero" id="resp">Extranjera</option>
-                                </select>
-                                <div class="valid-feedback">
-                                    Todo bien
-                                </div>
-                                <div class="invalid-feedback">
-                                    Por favor ingrese su residencia
-                                </div>
-                            </div>
-
-                            <div id="contenedor">
-
-                            </div>
-                            <button type="submit" class="btn btn-primary mt-3 mb-3">Enviar solicitud</button>
-                        </div>
-                    </form>
-                </div>
+                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Cerrar</button>
