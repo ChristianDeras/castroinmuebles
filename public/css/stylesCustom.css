@@ -293,7 +293,8 @@ button > a:visited{
 }
 
 .cards {
-	width: 300px;
+	width: 800px;
+    height: 900px;
 	background-color: #fff;
 	padding: 15px;
 	border-radius: 5px;

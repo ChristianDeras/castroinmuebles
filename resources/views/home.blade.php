@@ -53,18 +53,15 @@
                     <div class="swiper-slide">
                         <div class="container  d-flex justify-content-center align-items-center">
                         <div class='cards'>
-                                <div class='icon'>
-                                    <i class="fas fa-laptop"></i>
-                                </div>
-                                <div class='texts'>
-                                    <h2>¿Necesitas algún documento de oficinas de gobierno/alcaldias?</h2>
+                                <div class=''>
+                                    <img  class="img-fluid" src="/Img/publi1.jpg" alt="" >
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="container  d-flex justify-content-center align-items-center">
-                        <div class='cards'>
+                            <div class='cards'>
                                 <div class='icon'>
                                     <i class="fas fa-laptop"></i>
                                 </div>
@@ -72,7 +69,6 @@
                                     <h2>¿Necesitas información o documentos de oficinas privadas?</h2>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -99,6 +95,8 @@
             </div>
                 </div>
             </div>
+            <br>
+            
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 <button class="btn btn-primary" data-bs-target="#formulario" data-bs-toggle="modal">Contactanos</button>
@@ -597,6 +595,7 @@ const swiper = new Swiper('.swiper', {
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
+        type: 'bullets'
     },
 
     // Navigation arrows
