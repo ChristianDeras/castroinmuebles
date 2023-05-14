@@ -34,11 +34,18 @@ Route::get('/', function () {
 Route::get('/corretajes/create', [CorretajeController::class,'create']);
 Route::post('/corretajes', [CorretajeController::class,'store']);
 Route::get('/AdminCorretajes',[CorretajeAdminController::class,'index']);
+Route::get('/AdminCorretajes/{estado}',[CorretajeAdminController::class,'filtrarActivos']);
+Route::put('/AdminCorretajes/{id}/actualizarestado',[CorretajeAdminController::class,'actualizarEstado'])->name('AdminCorretajes.actualizarestado');
 
 
 Route::get('/remodelaciones/create', [RemodelacionController::class,'create']);
 Route::post('/remodelaciones', [RemodelacionController::class,'store']);
 Route::get('/AdminRemodelaciones',[RemodelacionAdminController::class,'index']);
+Route::get('/AdminRemodelaciones/{estado}',[RemodelacionAdminController::class,'filtrarActivos']);
+Route::put('/AdminRemodelaciones/{id}/actualizarestado',[RemodelacionAdminController::class,'actualizarEstado'])->name('AdminRemodelaciones.actualizarestado');
+
+
+
 
 Route::get('/AdminCompradores',[CompradorAdminController::class,'index']);
 
@@ -58,3 +65,4 @@ Route::get('/viviendas/{id}', [PrincipalController::class, 'show']);
 Route::post('/extranjeros', [ExtranjeroController::class,'store']);
 
 Route::get('/AdminExtranjeros', [ExtranjeroAdminController::class,'index']);
+Route::get('/AdminExtranjeros/{estado}', [ExtranjeroAdminController::class,'filtrarActivos']);

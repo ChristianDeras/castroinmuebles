@@ -12,4 +12,10 @@ class ExtranjeroAdminController extends Controller
         $extranjeros = Extranjero::all();
         return view('extranjerosAdmon.index')->with('extranjeros',$extranjeros);
     }
+
+    public function filtrarActivos($estado)
+    {
+        $extranjeros = Extranjero::where('estado',$estado)->get();
+        return view('extranjerosAdmon.index')->with('extranjeros',$extranjeros);
+    }
 }

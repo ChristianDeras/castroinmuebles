@@ -9,8 +9,11 @@
             </div>
             <div class="col-6">
                 <p>Personas solicitantes de corretaje:</p>
+                <a href="/AdminCorretajes/1" class="btn btn-warning">Activos</a>
+                <a href="/AdminCorretajes/0" class="btn btn-warning">Atendidos</a>
+                <a href="/AdminCorretajes" class="btn btn-warning">Mostrar todo</a>
             </div>
-            <div class="col-12">
+            <div class="col-12 mt-2">
             <table id="example" class="hover" style="width:100%">
         <thead>
             <tr>
@@ -30,9 +33,15 @@
                 <td>{{$corretaje->correo}}</td>
                 <td>{{$corretaje->telefono}}</td>
                 <td>{{$corretaje->rol}}</td>
-                <td>{{($corretaje->estado = 1)? 'Activo': 'Inactivo'}}</td>
+                <td>{{($corretaje->estado == 1)? 'Activo': 'Inactivo'}}</td>
                 <td>{{$corretaje->created_at}}</td>
-                <td><button class="btn btn-warning">Quitar</button></td>
+                <td>
+                <form action="{{ route('AdminCorretajes.actualizarestado', $corretaje->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <button type="submit" class="btn btn-warning w-100 {{($corretaje->estado==0)? 'disabled':''}}" > {{($corretaje->estado==1)? 'Atender':'Ya atendido'}}</button>
+                </form>
+                </td>
             </tr>
         @endforeach    
         </tbody>
@@ -51,5 +60,7 @@
             </div>
         </div>
     </div>
-
+<script>
+    
+</script>
 @endsection
