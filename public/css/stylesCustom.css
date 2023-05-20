@@ -26,6 +26,11 @@ body {
     border-bottom-left-radius: 35%;
 }
 
+.brd-right{
+    border-top-left-radius: 15%;
+    border-bottom-right-radius: 35%;
+}
+
 .font-primary{
     color: var(--colortexto);
     

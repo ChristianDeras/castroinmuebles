@@ -171,11 +171,52 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Acerca de nosotros!</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 ">
+                        <div class="container">
+                            <span class="text-disp">
+                                Nova <span class="under">Express!</span>
+                            </span>
+                            <br>
+                            <br>
+                            <div>
+                                <p class="font-rowdies-scalable bgNative color-white p-4 extras brd-right font-primary">
+                                Novaexpress no es un servicio de mensajería, somos tu asistente personal en El Salvador, pendientes 24/7 de cualquier necesidad que tengas!
+                                <br>
+                                <br>
+                                Cubrimos todas tus necesidades cuando lo quieres, como lo quieres y por un precio justo 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 ">
+                        <div class="container">
+                            <span class="font-rowdies-scalable">
+                                Por medio de la suscripción a Novaexpress tendrás la facilidad de hacerte cargo de esos tramites que por estar lejos te resultan complicados
+                                <br>
+                                <br>
+                                Al suscribirte podrás:
+                            </span>
+                            <ul class="fa-ul font-rowdies-scalable">
+                                <li><span class="fa-li"><i class="fa fa-money" aria-hidden="true"></i></span>Paga impuestos municipales</li>
+                                <li><span class="fa-li"><i class="fa fa-building" aria-hidden="true"></i></span>Contratar servicios</li>
+                                <li><span class="fa-li"><i class="fa fa-car" aria-hidden="true"></i></span>Cotizar bienes como vehículos</li>
+                                <li><span class="fa-li"><i class="fa fa-hotel" aria-hidden="true"></i></span>Administrar tus propiedades </li>
+                                <li><span class="fa-li"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></span>Realizar cualquier tramite administrativo en oficinas de gobierno o privadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="font-rowdies-scalable">Pero además podrás estar al cuidado de tus seres queridos con la confianza de un servicio honesto y transparente</p>
+                        <p class="font-rowdies-scalable">Pagamos colegiaturas y mensualidades por ti, en cualquier institución enviándote además la información que pidas en el momento que la necesitas, asi, podrás estar al tanto de tus seres queridos desde la distancia y ver que aprovechan al máximo tu esfuerzo.</p>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Cerrar</button>
@@ -210,12 +251,11 @@ Swal.fire({
     <div class="row aniview" data-av-animation="slideInRight">
         <div class="col-sm-8 d-flex justify-content-center align-items-center mt-5">
             <div class="info w-75 justify">
-                <span class="font-normal">Somos una agencia inmobiliaria encargada de la compra y venta de viviendas con
-                    más de 15 años de experiencia
-                    en el rubro, nuestro objetivo es asesorarte de la mejor manera y ofrecerte una atención de calidad,
-                    acontinuación
-                    en la web puedes encontrar información de contacto y de tramites para obtener mayor
-                    información</span>
+                <span class="font-normal">Nova inmobiliaria es un clúster de profesionales con larga trayectoria en el sector de viviendas, 
+                    compuesto por constructores, corredores de bienes raíces, peritos expertos, abogados notarios y contadores
+                     reunidos con el objetivo de cambiar el servicio de bienes y raíces en El Salvador, proveyendo a nuestros 
+                     clientes de nuestra experiencia, bases legales y criterios técnicos en la intermediación de sus negocios 
+                     inmobiliarios. </span>
                 <br>
                 <br>
                 <span class=""><b>Carlos Castro.</b></span>
