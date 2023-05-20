@@ -30,6 +30,9 @@ Route::get('/', function () {
 });
 */
 
+Route::get('/other', function(){
+    return view('other');
+});
 
 Route::get('/corretajes/create', [CorretajeController::class,'create']);
 Route::post('/corretajes', [CorretajeController::class,'store']);

@@ -14,8 +14,8 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/animate.css@3.7.2"> <!-- legacy -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/animate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@
                     <a class="nav-link" href="/blog"><i class="far fa-chart-bar"></i>Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);"><i class="fa-solid fa-phone"></i>Contacto</a>
+                    <a class="nav-link" href="/other"><i class="fa-solid fa-phone"></i>Misión y Visión</a>
                 </li>
             </ul>
         </div>
