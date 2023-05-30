@@ -33,8 +33,8 @@
 </button>
 
 
-<!-- Modal Extranjero -->
-<div class="modal fade mt-5" id="Extranjero" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Extranjero PC-->
+<div class="modal fade mt-5 popup-pc" style="z-index: 999999;" id="Extranjero" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content bg-gray">
             <div class="row">
@@ -66,6 +66,60 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade mt-5 popup-movil" id="Extranjero-movil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content bg-gray">
+        <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 ">
+                    <img src="/Img/publi1.jpg" class="img-fluid" alt="" height="500" width="500">
+                </div>
+            </div>
+          
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button class="btn btn-primary" data-bs-target="#formulario-movil" data-bs-toggle="modal">Siguiente <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade mt-2" id="formulario-movil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¡Asesorate!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-12">
+                    <div class="container-fluid brd-left text-center bgNative font-primary">
+                        <span class="text-disp-movil">¡ Hacemos tus tramites por tí !</span>
+                        <br>
+                    </div>
+                   
+                    <div class="extras mt-5">
+                        <span class="">Si estás en estados unidos y te preocupan tus familiares acá en el pais, te brindamos
+                            atención calificada para cualquier tramite interno que necesites en El Salvador (Cuido de familiares, pago de recibos)
+                            Fiestas sorpresas de cumpleaños.
+                        </span>
+                    </div>
+                </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button class="btn btn-primary" data-bs-target="#formulario" data-bs-toggle="modal">Contactanos</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="modal fade" id="formulario" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
         <div class="modal-content">
@@ -74,7 +128,7 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-lg-6 col-sm-12">
                         <div class="h3">Beneficios</div>
                         <hr>
                         <div class="list">
@@ -93,7 +147,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 col-lg-6 col-sm-12">
                         <form action="/extranjeros" method="POST" class="needs-validation" novalidate>
                             @csrf
                             <div class="row">
@@ -287,7 +341,7 @@ Swal.fire({
 </div>
 
 
-<div class="stacked-cards mt-5">
+<div class="stacked-cards mt-5 cards-pc">
     <ul>
         <li>
             <div class="container">
@@ -362,20 +416,20 @@ Swal.fire({
 
 
 
-<div class="container visually-hidden">
+<div class="container cards-movil">
 
     <div class="row">
 
         <div class="col-12">
             <div class="d-flex justify-content-center mt-5 scale aniview " data-av-animation="slideInUp">
-                <div class="card d-flex flex-row align-items-center overflow-hidden w-100">
+                <div class="card d-flex flex-row align-items-center overflow-hidden w-100 border-0">
                     <div class="figure">
                         <div class="circle-lg"></div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body background-color-native">
                         <h5 class="card-title">Servicio de corretaje</h5>
-                        <p class="card-text">El mejor servicio para poder vender tu propiedad.</p>
-                        <button type="button" class="btn btn-success btn-color "><a href="/corretajes/create"
+                        <p class="card-text">Ofrecemos servicios de remodelación y construcción para su vivienda.</p>
+                        <button type="button" class="btn btn-dark "><a href="/corretajes/create"
                                 class="text-decoration-none font-primary">Acceder al servicio</a></button>
                     </div>
                 </div>
@@ -383,17 +437,17 @@ Swal.fire({
         </div>
         <div class="col-12">
             <div class="d-flex justify-content-center mt-5 scale aniview " data-av-animation="slideInUp">
-                <div class="card d-flex flex-row align-items-center overflow-hidden w-100 ">
+                <div class="card d-flex flex-row align-items-center overflow-hidden w-100 border-0">
                     <div class="figure">
                         <div class="circle-lg"></div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body background-color-native">
                         <h5 class="card-title">Remodelaciones y construcciones</h5>
                         <p class="card-text">Ofrecemos servicios de remodelación y construcción para su vivienda solo
                             deverás rellenar
                             un pequeño formulario acontinuación.
                         </p>
-                        <button type="button" class="btn btn-success btn-color"><a href="/remodelaciones/create"
+                        <button type="button" class="btn btn-dark"><a href="/remodelaciones/create"
                                 class="text-decoration-none font-primary">Acceder al servicio</a></button>
                     </div>
                 </div>
@@ -401,22 +455,21 @@ Swal.fire({
         </div>
         <div class="col-12">
             <div class="d-flex justify-content-center mt-5 scale aniview" data-av-animation="slideInUp">
-                <div class="card d-flex flex-row align-items-center overflow-hidden w-100">
+                <div class="card d-flex flex-row align-items-center overflow-hidden w-100 border-0">
                     <div class="figure">
                         <div class="circle-lg"></div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body background-color-native">
                         <h5 class="card-title">Servicios extra</h5>
-                        <p class="card-text">
-                            Realizamos servicios de:
-                        <ul class="d-flex justify-content-around">
-                            <li>Valuos</li>
-                            <li>Mediciones</li>
-                            <li>Remediciones</li>
-                            <li>Lotificaciones</li>
-                        </ul>
+                        Realizamos servicios de:
+                            <ul class="">
+                                Valuos, Mediciones
+                                <br>
+                                Remediciones,
+                                Lotificaciones
+                            </ul>
                         </p>
-                        <button type="button" class="btn btn-success btn-color" id="viviendas"><a href="/corretaje"
+                        <button type="button" class="btn btn-dark " id="viviendas"><a href="/corretaje"
                                 class="text-decoration-none font-primary">Acceder al servicio</a></button>
                     </div>
                 </div>
@@ -474,6 +527,8 @@ Swal.fire({
 
     </div>
 
+  
+
     <script src="{{ asset('js/resources.js') }}"></script>
 
     <script>
@@ -508,7 +563,13 @@ Swal.fire({
 
     <script>
         $(document).ready(function () {
-            $('#Extranjero').modal('toggle');
+            if ($('#Extranjero-movil').is(':visible')) {
+                $('#Extranjero-movil').modal('toggle');
+                $('body').removeAttr('style');
+            }
+            if ($('#Extranjero').is(':visible')) {
+                $('#Extranjero').modal('toggle');
+            }
         })
     </script>
     
