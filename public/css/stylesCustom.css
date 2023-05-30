@@ -14,6 +14,12 @@ body {
     font-size: 60px;
 }
 
+.text-disp-movil
+ {
+    font-family: 'Rowdies', cursive;
+    font-size: 43px;
+}
+
 .text-content{
     font-size: 24px;
 }
@@ -90,6 +96,12 @@ body{
     height: 20px;
     background-color: var(--bgnative);
     border-radius: 200px;
+}
+
+.background-color-native{
+    color: white;
+    background-color: var(--bgnative);
+    border-bottom-right-radius: 40px;
 }
 
 .circle{
@@ -1011,3 +1023,40 @@ header h1 {
 }
 
 
+/* Responsivo*/
+@media (max-width: 767px) {
+    .cards-pc{
+        display: none;
+    }
+
+    .cards-movil{
+        display: block;
+    }
+
+    .popup-pc{
+        display: none;
+    }
+
+    .popup-movil{
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .cards-pc{
+        display: block;
+    }
+
+    .cards-movil{
+        display: none;
+    }
+
+    .popup-pc{
+        display: block;
+    }
+
+    .popup-movil{
+        display: none;
+    }
+    
+}
