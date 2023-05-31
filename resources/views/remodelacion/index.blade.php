@@ -10,7 +10,7 @@
 
         </div>
         <div class="col-md-6 col-sm-12">
-            <form class="row g-3 needs-validation p-3 border rounded-2 bg-white" action="/remodelaciones" method="POST"
+            <form class="row g-3 needs-validation p-3 border rounded-2 bg-white" id="remodelacion" action="/remodelaciones" method="POST"
                 novalidate>
                 @csrf
                 <div class="col-12">
@@ -76,9 +76,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-8">
                     <label for="tel" class="form-label">Departamento:</label>
-                    <input type="text" id="departamento" name="departamento" class="form-control" required>
+
+                    <select id="departamentos-select" name="departamento" class="form-select" required>
+                        <option value="">Selecciona un departamento</option>
+                        </select>
                     <div class="valid-feedback">
                         Todo bien
                     </div>
@@ -86,9 +89,11 @@
                         Por favor ingrese su departamento.
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-8">
                     <label for="tel" class="form-label">Municipio:</label>
-                    <input type="text" id="departamento" name="municipio" class="form-control" required>
+                    <select id="atributos-select" class="form-select" name="municipio" required disabled>
+                        <option value="">Selecciona un departamento primero</option>
+                    </select>
                     <div class="valid-feedback">
                         Todo bien
                     </div>
@@ -158,7 +163,7 @@
                             <br><br>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="miCheckbox">
+                                <input class="form-check-input" type="checkbox" id="miCheckbox" required>
                                 <label class="form-check-label" for="miCheckbox">Acepto los términos y condiciones</label>
                             </div>
                             <div class="modal-footer">
@@ -205,7 +210,7 @@
 
 <script>
     $(document).ready(function() {
-        $('#terminos').submit(function(event) {
+        $('#remodelacion').submit(function(event) {
             var checkbox = $('#miCheckbox');
             if (!checkbox.is(':checked')) {
             event.preventDefault();
@@ -214,4 +219,66 @@
         });
     });
   </script>
+
+<script>
+        var departamentoSelect = document.getElementById('departamentos-select');
+        var atributosSelect = document.getElementById('atributos-select');
+
+        departamentoSelect.addEventListener('change', function() {
+        var seleccionado = departamentoSelect.value;
+
+        if (seleccionado) {
+            fetch('../js/departamentos.json')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                var atributosDepartamento = data[seleccionado];
+
+                atributosSelect.innerHTML = '';
+                for (var i = 0; i < atributosDepartamento.length; i++) {
+                var opcion = document.createElement('option');
+                opcion.value = atributosDepartamento[i];
+                opcion.textContent = atributosDepartamento[i];
+                atributosSelect.appendChild(opcion);
+                }
+
+                atributosSelect.disabled = false;
+            })
+            .catch(function(error) {
+                console.log('Error al cargar los atributos:', error);
+            });
+        } else {
+            atributosSelect.disabled = true;
+            atributosSelect.innerHTML = '<option value="">Selecciona un departamento primero</option>';
+        }
+        });
+</script>
+
+<script>
+    var departamentosSelect = document.getElementById('departamentos-select');
+    var departamentos = [
+    'Ahuachapán',
+    'Cabañas',
+    'Chalatenango',
+    'Cuscatlán',
+    'La Libertad',
+    'La Paz',
+    'La Unión',
+    'Morazán',
+    'San Miguel',
+    'San Salvador',
+    'San Vicente',
+    'Santa Ana',
+    'Sonsonate',
+    'Usulután'
+    ];
+
+    for (var i = 0; i < departamentos.length; i++) {
+    var opcion = document.createElement('option');
+    opcion.value = departamentos[i];
+    opcion.textContent = departamentos[i];
+    departamentosSelect.appendChild(opcion);
+    }
+</script>
 @endsection

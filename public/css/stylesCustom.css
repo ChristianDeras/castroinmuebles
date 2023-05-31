@@ -238,8 +238,8 @@ button > a:visited{
 
 .data-section{
     background-color: whitesmoke;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 20px;
 }
 
 .destacado{
@@ -317,10 +317,13 @@ button > a:visited{
 }
 @media only screen and (max-width: 600px) {
  	.btn-flotante {
-		font-size: 14px;
+		font-size: 10px;
 		padding: 12px 20px;
 		bottom: 20px;
-		right: 20px;
+		right: auto;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        left: 50%;
+        transform: translateX(-50%);
 	}
 } 
 
@@ -1040,6 +1043,14 @@ header h1 {
     .popup-movil{
         display: block;
     }
+
+    .btn-pc{
+        display: none;
+    }
+
+    .btn-movil{
+        display: block;
+    }
 }
 
 @media (min-width: 768px) {
@@ -1059,4 +1070,11 @@ header h1 {
         display: none;
     }
     
+    .btn-pc{
+        display: block;
+    }
+
+    .btn-movil{
+        display: none;
+    }
 }

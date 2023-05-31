@@ -10,7 +10,7 @@
 
         </div>
         <div class="col-md-6 col-sm-12">
-            <form class="row g-3 needs-validation p-3 border rounded-2 bg-white" action="/corretajes" method="POST" novalidate>
+            <form class="row g-3 needs-validation p-3 border rounded-2 bg-white" id="formCorretaje" action="/corretajes" method="POST" novalidate>
                 @csrf
             <div class="col-12">
                     <label for="Nombre" class="form-label">Nombre completo:</label>
@@ -120,12 +120,18 @@
                             <br><br>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="miCheckbox">
+                                <input class="form-check-input" type="checkbox" id="miCheckbox" required>
                                 <label class="form-check-label" for="miCheckbox">Acepto los términos y condiciones</label>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary mb-3 btn-color">Enviar</button>
+                                <button type="submit" class="btn btn-primary  btn-color">Enviar</button>
+                                <div class="valid-feedback">
+                                    Todo bien
+                                </div>
+                                <div class="invalid-feedback">
+                                    Acepte los terminos y condiciones.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -167,7 +173,7 @@
 
   <script>
     $(document).ready(function() {
-        $('#terminos').submit(function(event) {
+        $('#formCorretaje').submit(function(event) {
             var checkbox = $('#miCheckbox');
             if (!checkbox.is(':checked')) {
             event.preventDefault();
