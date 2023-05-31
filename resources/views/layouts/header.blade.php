@@ -52,17 +52,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/"><i class="fas fa-tachometer-alt"></i>Inicio</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/#about"><i class="fa-regular fa-address-card"></i></i>¿Quienes somos?</a>
+                <li class="nav-item active" id="Principal">
+                    <a class="nav-link" href="/#about">¿Quienes somos?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/#servicios"><i class="far fa-clone"></i>Servicios</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link" href="/#viviendas"><i class="fa-solid fa-house-chimney-window"></i>Viviendas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog"><i class="far fa-chart-bar"></i>Blog</a>
+                    <a class="nav-link" id="PrincipalBlog" href="/blog"><i class="far fa-chart-bar"></i>Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/other"><i class="fa-solid fa-phone"></i>Misión y Visión</a>
