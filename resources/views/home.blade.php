@@ -555,20 +555,19 @@ Swal.fire({
 <!-- Inicio de servicios -->
 <div class="row mt-5">
     <div class="col-sm-12">
-        <h1 class="text-center font-rowdies">Viviendas</h1>
+        <h1 class="text-center font-rowdies" id="viviendas">Viviendas</h1>
     </div>
 </div>
 
 
-<div class="viviendas position-relative d-flex flex-wrap">
+<div class="viviendas position-relative d-flex flex-wrap" >
     <div class="shape2">
         <img src="/Img/Barras izq 2.png" alt="" class="img-fluid">
     </div>
     <div class="row d-flex justify-content-center w-100">
         @foreach ($viviendas as $vivienda)
         <div class="col-md-4 col-sm-12">
-            <div class="profile-card-4 text-center aniview" data-av-animation="pulse"><img src="/Img/hero.webp"
-                    class="img img-fluid">
+            <div class="profile-card-4 text-center aniview contimg" data-av-animation="pulse"><img class="imgResize" src="{{$vivienda->imagen}}">
                 <div class="profile-content mt-3">
                     <div class="profile-name">{{$vivienda->nombreinmueble}}
                     </div>

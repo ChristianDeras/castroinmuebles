@@ -48,29 +48,29 @@
                 </div>
             </div>
 
-            <h3>!Hey veamos una muestra en 360°¡</h3>
+            <!-- <h3>!Hey veamos una muestra en 360°¡</h3>
             <div class="col-md-12 col-sm-12 col-xxl-12">
                 <button type="submit" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#exampleModal">Abrir
                     360°</button>
-            </div>
+            </div> -->
         </div>
         <div class="col-md-6 col-sm-12">
             <h2 class="font-rowdies text-center">{{$vivienda->nombreinmueble}}</span></h2>
             <h3>Detalles:</h3>
             <div class="row g-3">
                 <div class="col-md-6 col-sm-12 col-xxl-12  ">
-                    <div class="data d-flex justify-content-around align-items-center ">
-                        <div class="circle-sm d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-house "></i>
+                    <div class="data d-flex justify-content-center align-items-center ">
+                        <div class="circle-sm d-flex justify-content-center align-items-center m-2">
+                            <i class="fa-solid fa-house ml"></i>
                         </div>
                         <span class="font-rowdies-scalable">Habitaciones:
                             <span><b>{{$vivienda->habitaciones}}</b></span></span>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xxl-12">
-                    <div class="data d-flex justify-content-around align-items-center ">
-                        <div class="circle-sm d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-toilet"></i>
+                    <div class="data d-flex justify-content-center align-items-center ">
+                        <div class="circle-sm d-flex justify-content-center align-items-center m-2">
+                            <i class="fa-solid fa-toilet ml"></i>
                         </div>
                         <span class="font-rowdies-scalable">Cantidad de baños:
                             <span><b>{{$vivienda->sanitarios}}</b></span></span>
@@ -78,8 +78,8 @@
                 </div>
                 <div class="col-md-12 col-sm-12 col-xxl-12  ">
                     <div class="data d-flex justify-content-center align-items-center ">
-                        <div class="circle-sm d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-house "></i>
+                        <div class="circle-sm d-flex justify-content-center align-items-center m-2">
+                            <i class="fa-solid fa-house ml"></i>
                         </div>
                         <span class="font-rowdies-scalable">Cantidad de plantas:
                             <span><b>{{$vivienda->plantas}}</b></span></span>
@@ -101,7 +101,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" style="z-index: 9999;" aria-labelledby="exampleModalLabel"
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" style="z-index: 9999;" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -123,7 +123,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <script src="/Js/main.js"></script>
 <script>
 const swiper = new Swiper('.swiper', {
