@@ -5,29 +5,18 @@
     <div class="row mt-5">
         <div class="col-md-6 col-sm-12 ">
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper h-75 w-75">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="container  d-flex justify-content-center align-items-center">
-                            <img src="/Img/rascacielos.jpg" alt="" class="img-fluid rounded-4" width="400">
-
+            
+                    @foreach ($detalleviviendas as $detallevivienda)
+                    <div class="swiper-slide d-flex justify-content-center align-items-center" >
+                        <div class="container d-flex justify-content-center align-items-center">
+                            <img src="{{$detallevivienda->rutaImagen}}" alt="" class="img-fluid rounded-4 overflow-hidden" width="300" height="300">
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="container  d-flex justify-content-center align-items-center">
-                            <img src="/Img/rascacielos.jpg" alt="" class="img-fluid rounded-4" width="400">
-
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="container  d-flex justify-content-center align-items-center">
-                            <img src="/Img/rascacielos.jpg" alt="" class="img-fluid rounded-4" width="400">
-
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
 
 
@@ -36,17 +25,7 @@
                 <div class="swiper-button-next"></div>
 
             </div>
-            <h3>Servicios:</h3>
-            <div class="col-md-12 col-sm-12 col-xxl-12">
-                <div class=" data d-flex justify-content-center align-items-center ">
-                    <ul
-                        class="font-rowdies-scalable d-flex justify-content-center flex-wrap ul-info align-items-center">
-                        <li class="w-100">Vista al mar</li>
-                        <li class="w-100">Centros comerciales cercanos</li>
-                        <li class="w-100">1 cochera</li>
-                    </ul>
-                </div>
-            </div>
+            
 
             <!-- <h3>!Hey veamos una muestra en 360°¡</h3>
             <div class="col-md-12 col-sm-12 col-xxl-12">
@@ -89,12 +68,21 @@
                 <div class="col-md-12 col-sm-12 col-xxl-12">
                     <div class=" data d-flex justify-content-around align-items-center ">
                         <span>
-                            {{$vivienda->detalle}}
-                            <br>
-                            <br>
                             {{$vivienda->descripcion}}
                         </span>
                     </div>
+                </div>
+            </div>
+
+            <h3>Adicionales:</h3>
+            <div class="col-md-12 col-sm-12 col-xxl-12">
+                <div class=" data d-flex justify-content-center align-items-center ">
+                    <ul
+                        class="font-rowdies-scalable d-flex justify-content-center flex-wrap ul-info align-items-center">
+                        <li class="w-100">Patio grande.</li>
+                        <li class="w-100">Todos los detalles son nuevos a estrenar</li>
+                        <li class="w-100">Ubicada a la orilla de la carretera.</li>
+                    </ul>
                 </div>
             </div>
 
