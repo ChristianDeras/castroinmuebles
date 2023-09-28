@@ -13,10 +13,11 @@
                     @foreach ($detalleviviendas as $detallevivienda)
                     <div class="swiper-slide d-flex justify-content-center align-items-center" >
                         <div class="container d-flex justify-content-center align-items-center">
-                            <img src="{{$detallevivienda->rutaImagen}}" alt="" class="img-fluid rounded-4 overflow-hidden" width="300" height="300">
+                            <img src="{{$detallevivienda->rutaImagen}}" alt="" style="z-index:9999999;" class="img-fluid rounded-4 overflow-hidden imagen-modal" onclick="abrirModal('{{$detallevivienda->rutaImagen}}')" width="300" height="300">
                         </div>
                     </div>
                     @endforeach
+
                 </div>
 
 
@@ -35,6 +36,7 @@
         </div>
         <div class="col-md-6 col-sm-12">
             <h2 class="font-rowdies text-center">{{$vivienda->nombreinmueble}}</span></h2>
+            <h2 class="font-rowdies text-center">Tel: 7122-0568</h2>
             <h3>Detalles:</h3>
             <div class="row g-3">
                 <div class="col-md-6 col-sm-12 col-xxl-12  ">
@@ -79,9 +81,12 @@
                 <div class=" data d-flex justify-content-center align-items-center ">
                     <ul
                         class="font-rowdies-scalable d-flex justify-content-center flex-wrap ul-info align-items-center">
-                        <li class="w-100">Patio grande.</li>
-                        <li class="w-100">Todos los detalles son nuevos a estrenar</li>
-                        <li class="w-100">Ubicada a la orilla de la carretera.</li>
+                        @foreach ($adicionalviviendas as $adicional)
+                            <li class="w-100">{{$adicional->Detalle3}}</li>
+                            <li class="w-100">{{$adicional->Detalle2}}</li>
+                            <li class="w-100">{{$adicional->Detalle3}}</li>
+                            <li class="w-100">{{$adicional->Detalle4}}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -89,6 +94,12 @@
         </div>
     </div>
 </div>
+
+
+<div id="modal" class="modal">
+                        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                         <img id="imagen-modal" src="" alt="Imagen" class="modal-contenido">
+                    </div>
 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" style="z-index: 9999;" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -135,5 +146,30 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-scrollbar',
     },
 });
+</script>
+
+<script>
+    function abrirModal(imagenSrc) {
+    var modal = document.getElementById("modal");
+    var imagenModal = document.getElementById("imagen-modal");
+    
+    // Establece la fuente de la imagen modal
+    imagenModal.src = imagenSrc;
+    
+    modal.style.display = "block";
+}
+
+function cerrarModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+
+// Cierra el modal si se hace clic fuera de la imagen
+window.onclick = function(event) {
+    var modal = document.getElementById("modal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
 </script>
 @endsection
