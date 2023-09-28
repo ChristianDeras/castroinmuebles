@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdicionalViviendas;
 use App\Models\DetalleVivienda;
 use App\Models\Vivienda;
 use Illuminate\Http\Request;
@@ -50,7 +51,8 @@ class PrincipalController extends Controller
     {
         $vivienda = Vivienda::find($id);
         $detalleviviendas = DetalleVivienda::where('vivienda_id', $id)->get();
-        return view('vivienda.viviendas', compact('vivienda','detalleviviendas'));
+        $adicionalviviendas = AdicionalViviendas::where('vivienda_id', $id)->get();
+        return view('vivienda.viviendas', compact('vivienda','detalleviviendas','adicionalviviendas'));
     }
 
     /**
