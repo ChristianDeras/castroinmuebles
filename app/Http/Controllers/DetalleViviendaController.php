@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Remodelacion;
+use App\Models\Vivienda;
 use Illuminate\Http\Request;
 
-class RemodelacionController extends Controller
+class DetalleViviendaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class RemodelacionController extends Controller
      */
     public function index()
     {
-        return view('remodelacion.index');
+        return view('detalle.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class RemodelacionController extends Controller
      */
     public function create()
     {
-        return view('remodelacion.index');
+        //
     }
 
     /**
@@ -35,20 +35,7 @@ class RemodelacionController extends Controller
      */
     public function store(Request $request)
     {
-        $remodelacion = new Remodelacion();
-        $remodelacion->nombrecompleto = $request->get('nombrecompleto');
-        $remodelacion->correo = $request->get('correo');
-        $remodelacion->telefono = $request->get('telefono');
-        $remodelacion->tipo = $request->get('tipo'); 
-        $remodelacion->presupuesto = $request->get('presupuesto');
-        $remodelacion->departamento = $request->get('departamento');
-        $remodelacion->municipio = $request->get('municipio');
-
-        $remodelacion->estado = 1;
-
-        $remodelacion->save();
-
-        return redirect('/')->with('success','Formulario enviado exitosamente');
+        //
     }
 
     /**

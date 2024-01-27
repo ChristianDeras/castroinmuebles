@@ -40,7 +40,6 @@ class CorretajeController extends Controller
         $corretaje->telefono = $request->get('telefono');
         $corretaje->rol = $request->get('rol');
         $corretaje->estado = 1;
-
         $corretaje->save();
 
         return redirect('/')->with('success','Formulario enviado exitosamente');

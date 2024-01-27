@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Remodelacion;
+use App\Models\Vivienda;
 use Illuminate\Http\Request;
 
-class RemodelacionController extends Controller
+class ViviendaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class RemodelacionController extends Controller
      */
     public function index()
     {
-        return view('remodelacion.index');
+        return view('viviendaAdmin.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class RemodelacionController extends Controller
      */
     public function create()
     {
-        return view('remodelacion.index');
+        //
     }
 
     /**
@@ -35,20 +35,27 @@ class RemodelacionController extends Controller
      */
     public function store(Request $request)
     {
-        $remodelacion = new Remodelacion();
-        $remodelacion->nombrecompleto = $request->get('nombrecompleto');
-        $remodelacion->correo = $request->get('correo');
-        $remodelacion->telefono = $request->get('telefono');
-        $remodelacion->tipo = $request->get('tipo'); 
-        $remodelacion->presupuesto = $request->get('presupuesto');
-        $remodelacion->departamento = $request->get('departamento');
-        $remodelacion->municipio = $request->get('municipio');
-
-        $remodelacion->estado = 1;
-
-        $remodelacion->save();
-
-        return redirect('/')->with('success','Formulario enviado exitosamente');
+        $request->validate([
+            'nombreinmueble' => 'required|string|max:255',
+            'descripcion' => 'required|string',
+            'detalle' => 'required|string',
+            'precio' => 'required|numeric',
+            'habitaciones' => 'required|integer',
+            'sanitarios' => 'required|integer',
+            'plantas' => 'required|integer',
+        ]);
+    
+        // Crear un nuevo inmueble
+        $vivienda = new Vivienda();
+        $vivienda->nombreinmueble = $request->get('nombreinmueble');
+        $vivienda->descripcion = $request->get('descripcion');
+        $vivienda->detalle = $request->get('detalle');
+        $vivienda->precio = $request->get('precio');
+        $vivienda->habitaciones = $request->get('habitaciones');
+        $vivienda->sanitarios = $request->get('sanitarios');
+        $vivienda->plantas = $request->get('plantas');
+        $vivienda->estado = 'Activo';
+        $vivienda->save();
     }
 
     /**

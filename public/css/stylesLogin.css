@@ -30,4 +30,34 @@ li:hover {background-color: #ffbf00;
     height: 100%;
 }
 
+.cardd{
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 6px 23px 14px -18px rgba(37,107,186,0.62);
+    -webkit-box-shadow: 6px 23px 14px -18px rgba(37,107,186,0.62);
+    -moz-box-shadow: 6px 23px 14px -18px rgba(37,107,186,0.62);
+}
 
+.carddex{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 6px 23px 14px -18px rgba(66,127,194,0.62);
+-webkit-box-shadow: 6px 23px 14px -18px rgba(66,127,194,0.62);
+-moz-box-shadow: 6px 23px 14px -18px rgba(66,127,194,0.62);
+}
+
+
+
+.texto{
+    padding: 25px;
+    
+}
+
+
+body{
+    background-color: #F0F3FB;
+}

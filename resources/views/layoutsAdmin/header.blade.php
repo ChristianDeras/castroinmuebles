@@ -14,13 +14,13 @@
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e073e6168c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-
+    <link rel="stylesheet" href="{{ asset('css/stylesLogin.css') }}" />
 </head>
 
 <body>
     <div class="contenedor d-flex vh-100">
         <div class="d-flex flex-column flex-shrink-0 p-3 text-white login-r" style="width: 280px;">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <a href="/dashboard" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <svg class="bi me-2" width="40" height="32">
                     <use xlink:href="#bootstrap" />
                 </svg>
@@ -55,6 +55,27 @@
                         class="nav-link text-white {{  request()->is('AdminExtranjeros') ? 'active' : ''}}">
                         <i class="fa-solid fa-flag-usa"></i>
                         Extranjeros
+                    </a>
+                </li>
+                <li>
+                    <a href="/AdminViviendas"
+                        class="nav-link text-white {{  request()->is('AdminViviendas') ? 'active' : ''}}">
+                        <i class="fa-solid fa-house"></i>
+                        Agregar Vivienda
+                    </a>
+                </li>
+                <li>
+                    <a href="/informacionAdicional"
+                        class="nav-link text-white {{  request()->is('informacionAdicional') ? 'active' : ''}}">
+                        <i class="fa-solid fa-house"></i>
+                        Agregar Información
+                    </a>
+                </li>
+                <li>
+                    <a href="/DetalleViviendas"
+                        class="nav-link text-white {{  request()->is('DetalleViviendas') ? 'active' : ''}}">
+                        <i class="fa-solid fa-upload"></i>
+                        Manejar imagenes
                     </a>
                 </li>
             </ul>

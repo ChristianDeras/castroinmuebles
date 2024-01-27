@@ -97,9 +97,9 @@
 
 
 <div id="modal" class="modal">
-                        <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                         <img id="imagen-modal" src="" alt="Imagen" class="modal-contenido">
-                    </div>
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <img id="imagen-modal" src="" alt="Imagen" class="modal-contenido">
+</div>
 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" style="z-index: 9999;" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-xl">

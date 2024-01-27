@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Remodelacion;
+use App\Models\AdicionalViviendas;
+use App\Models\Vivienda;
 use Illuminate\Http\Request;
 
-class RemodelacionController extends Controller
+class InformacionViviendaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class RemodelacionController extends Controller
      */
     public function index()
     {
-        return view('remodelacion.index');
+        $viviendas = Vivienda::all();
+        return view('infoViviendas.index',compact('viviendas'));
     }
 
     /**
@@ -24,7 +26,7 @@ class RemodelacionController extends Controller
      */
     public function create()
     {
-        return view('remodelacion.index');
+        //
     }
 
     /**
@@ -35,20 +37,21 @@ class RemodelacionController extends Controller
      */
     public function store(Request $request)
     {
-        $remodelacion = new Remodelacion();
-        $remodelacion->nombrecompleto = $request->get('nombrecompleto');
-        $remodelacion->correo = $request->get('correo');
-        $remodelacion->telefono = $request->get('telefono');
-        $remodelacion->tipo = $request->get('tipo'); 
-        $remodelacion->presupuesto = $request->get('presupuesto');
-        $remodelacion->departamento = $request->get('departamento');
-        $remodelacion->municipio = $request->get('municipio');
+        $detalle = new AdicionalViviendas();
+        $detalle->vivienda_id = $request->get('vivienda_id');
 
-        $remodelacion->estado = 1;
+        $request->validate([
+            'vivienda_id' => 'unique:adicional_viviendas,vivienda_id', // Asegura que vivienda_id sea único en la tabla detalles
+        ]);
 
-        $remodelacion->save();
+        $detalle->detalle1 = $request->get('detalle1');
+        $detalle->detalle2 = $request->get('detalle2');
+        $detalle->detalle3 = $request->get('detalle3');
+        $detalle->detalle4 = $request->get('detalle4');
 
-        return redirect('/')->with('success','Formulario enviado exitosamente');
+        $detalle->save();
+
+        return view('infoViviendas.index');
     }
 
     /**
