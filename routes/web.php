@@ -5,12 +5,16 @@ use App\Http\Controllers\CompradorAdminController;
 use App\Http\Controllers\CompradorController;
 use App\Http\Controllers\CorretajeAdminController;
 use App\Http\Controllers\CorretajeController;
+use App\Http\Controllers\DetalleViviendaController;
 use App\Http\Controllers\ExtranjeroAdminController;
 use App\Http\Controllers\ExtranjeroController;
+use App\Http\Controllers\InformacionViviendaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\RemodelacionAdminController;
 use App\Http\Controllers\RemodelacionController;
+use App\Http\Controllers\Vivienda;
+use App\Http\Controllers\ViviendaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -69,3 +73,9 @@ Route::post('/extranjeros', [ExtranjeroController::class,'store']);
 
 Route::get('/AdminExtranjeros', [ExtranjeroAdminController::class,'index']);
 Route::get('/AdminExtranjeros/{estado}', [ExtranjeroAdminController::class,'filtrarActivos']);
+Route::get('/AdminViviendas', [ViviendaController::class,'index']);
+Route::get('/informacionAdicional',[InformacionViviendaController::class,'index']);
+Route::get('/DetalleViviendas', [DetalleViviendaController::class,'index']);
+Route::post('/AdminViviendas', [ViviendaController::class,'store']);
+
+Route::post('/informacionAdicional',[InformacionViviendaController::class,'store']);
